@@ -94,7 +94,7 @@ const ThandyLifestyleLanding = () => {
     },
     {
       icon: <Camera className="w-8 h-8" />,
-      title: "Photo Studio",
+      title: "Private Cinema",
       description: "Professional photography arena for capturing special moments",
       image: "https://images.unsplash.com/photo-1554048612-b6ebae92138d?w=600&h=400&fit=crop"
     },
@@ -155,75 +155,75 @@ const ThandyLifestyleLanding = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
-            >
-              Thandy Lifestyle
-            </motion.div>
-            
-            <div className="hidden lg:flex space-x-8">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-              ))}
-            </div>
-
-            <div className="hidden lg:flex items-center space-x-4">
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 hover:scale-105 transform transition-all duration-300 shadow-lg"
-              >
-                Book Now
-              </button>
-            </div>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
-            >
-              {isMenuOpen ? <X size={24} className="text-slate-700" /> : <Menu size={24} className="text-slate-700" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden bg-white/98 backdrop-blur-lg border-t border-slate-200/50"
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 backdrop-blur-lg border-b border-teal-500/30 shadow-lg">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-20">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="flex items-center"
+      >
+        <img src="/logo.png" alt="Thandy Lifestyle Logo" className="h-22 w-auto filter drop-shadow-md" />
+      </motion.div>
+                   
+      <div className="hidden lg:flex space-x-8">
+        {['Home', 'Services', 'About', 'Contact'].map((item) => (
+          <button
+            key={item}
+            onClick={() => scrollToSection(item.toLowerCase())}
+            className="text-white hover:text-teal-100 transition-colors duration-300 font-medium relative group"
           >
-            <div className="px-4 py-6 space-y-4">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-slate-700 hover:text-emerald-600 transition-colors duration-300 py-3 text-lg font-medium"
-                >
-                  {item}
-                </button>
-              ))}
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="w-full mt-4 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-all duration-300"
-              >
-                Book Now
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </nav>
+            {item}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </button>
+        ))}
+      </div>
+
+      <div className="hidden lg:flex items-center space-x-4">
+        <button
+          onClick={() => scrollToSection('contact')}
+          className="px-6 py-3 bg-white text-teal-700 font-semibold rounded-full hover:bg-teal-50 hover:scale-105 transform transition-all duration-300 shadow-lg"
+        >
+          Book Now
+        </button>
+      </div>
+
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+      >
+        {isMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="lg:hidden bg-gradient-to-b from-teal-700 to-emerald-700 backdrop-blur-lg border-t border-white/20"
+    >
+      <div className="px-4 py-6 space-y-4">
+        {['Home', 'Services', 'About', 'Contact'].map((item) => (
+          <button
+            key={item}
+            onClick={() => scrollToSection(item.toLowerCase())}
+            className="block w-full text-left text-white hover:text-teal-100 transition-colors duration-300 py-3 text-lg font-medium"
+          >
+            {item}
+          </button>
+        ))}
+        <button
+          onClick={() => scrollToSection('contact')}
+          className="w-full mt-4 px-6 py-3 bg-white text-teal-700 font-semibold rounded-full hover:bg-teal-50 transition-all duration-300"
+        >
+          Book Now
+        </button>
+      </div>
+    </motion.div>
+  )}
+</nav>
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -546,7 +546,7 @@ const ThandyLifestyleLanding = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                      <p className="text-slate-600">Available for inquiries</p>
+                      <p className="text-slate-600">+234 813 320 7712, +234 911 539 0898</p>
                     </div>
                   </div>
                   
@@ -671,8 +671,7 @@ const ThandyLifestyleLanding = () => {
               Your Dream Experience Awaits
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Don't just visit Lagos – experience it like never before with Thandy Lifestyle. 
-              Book your stay today and create memories that will last a lifetime.
+            20mins drive from okun ajah and easy access to beach
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center">
