@@ -22,6 +22,7 @@ import {
   ArrowRight,
   Quote
 } from 'lucide-react';
+import WhatsAppFloatingButton from '@/component/WhatsApp';
 
 const ThandyLifestyleLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -153,7 +154,8 @@ const ThandyLifestyleLanding = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden relative">
+      <WhatsAppFloatingButton />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800 backdrop-blur-lg border-b border-teal-500/30 shadow-lg">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
