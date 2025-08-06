@@ -120,13 +120,14 @@ const ThandyLifestyleLanding = () => {
   ];
 
   const features = [
+     "Vintage Lounge",
+    "Airbnb Services",
     "Unmatched Quality",
     "Personalized Experience", 
     "Convenient Location",
     "Airport Pickup Service",
-    "Private Dinner Section",
-    "Vintage Lounge",
-    "Airbnb Services"
+    "Private Dinner Section"
+   
   ];
 
   const testimonials = [
