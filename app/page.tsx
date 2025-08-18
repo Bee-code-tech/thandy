@@ -33,15 +33,15 @@ const ThandyLifestyleLanding = () => {
   // Image gallery for hero section
   const heroImages = [
     { 
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop",
+      url: "/banner1.jpg",
       title: "Luxurious Accommodations"
     },
     { 
-      url: "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1920&h=1080&fit=crop",
+      url: "/banner2.jpg",
       title: "African Cuisine Excellence"
     },
     { 
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&h=1080&fit=crop",
+      url: "/banner3.jpg",
       title: "Premium Pool Experience"
     }
   ];
@@ -330,6 +330,46 @@ const ThandyLifestyleLanding = () => {
           </motion.div>
         </div>
       </section>
+
+            {/* Lifestyle Video Section */}
+            <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-emerald-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
+          >
+            Experience Lifestyle with Thandy
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-12"
+          >
+            A glimpse into the moments, vibes, and luxury that define our brand.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="relative mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200 max-w-sm"
+          >
+            <video
+              src="/thandy.mp4"
+              controls
+              playsInline
+              className="w-full h-auto"
+            />
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Services Section */}
       <section id="services" className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 to-emerald-50">
